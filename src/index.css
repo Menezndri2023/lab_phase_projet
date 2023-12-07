@@ -10,6 +10,11 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+.app-container {
+  width: 1350px;
+  margin: 25px auto;
+  min-height: calc(100vh - 200px);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

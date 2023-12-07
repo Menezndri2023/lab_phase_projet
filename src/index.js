@@ -4,14 +4,22 @@ import './index.css';
 import App from './components/App';
 import Header from './components/Header';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
+import { AppProvider } from "./services/AppContext";
+import { AuthProvider } from "./services/AuthContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
-      <App />
+      <AuthProvider>
+        <AppProvider>
+          <Header/>
+          <div className="app-container">
+            <App />
+          </div>
+        </AppProvider>
+      </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
