@@ -20,9 +20,9 @@ const Cart = () => {
                 product.quantity = 0;
             }
             setState({ products, cart: [] });
-            navigate("/final");
+            navigate("/Final");
         } else {
-            navigate("/login");
+            navigate("/Login");
         }
     };
 
@@ -42,7 +42,7 @@ const Cart = () => {
 
     return (
         <div className={cartStyles.cartContainer}>
-            <div className={cartStyles.heading}>Cart</div>
+            {/* <div className={cartStyles.heading}>Cart</div> */}
             <div className={cartStyles.cartWrapper}>
                 <div className={cartStyles.cartDetails}>
                     {state.cart.length > 0 ? (

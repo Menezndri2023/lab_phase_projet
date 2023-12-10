@@ -5,9 +5,18 @@
     align-items: center;
     justify-content: space-between;
 }
+/* .cartWrapper{
+    display: flex;
+    /* flex-direction: column; */
 
-.card {
-    width: 380px;
+/* } */
+/* .cartDetails{
+    display: flex;
+    flex-direction: row;
+} */
+
+/* .card {
+    width: 80px;
     height: 20px;
     border-radius: 5px;
     padding: 30px;
@@ -16,7 +25,7 @@
 
 .card img {
     position: absolute;
-}
+} */
 
 .mango {
     height: 20px;
@@ -54,4 +63,18 @@
     text-transform: uppercase;
     color: #101010;
     letter-spacing: 3px;
+}
+.btnContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.orderBtn{
+    width: 15%;
+    height: 40%;
+    align-items: center;
+    border-radius: 10%;
+    display: flex;
+    background-color: #f9bb4a;
+
 }

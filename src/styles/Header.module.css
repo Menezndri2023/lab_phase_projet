@@ -33,19 +33,19 @@
 a {
     text-decoration: none;
     color: #fff;
-  }
-   
- a.active {
+}
+
+a.active {
     color: orange;
 }
 
- .navItem:hover {
+.navItem:hover {
     border-bottom: 2px solid yellow;
 }
- 
+
 .navItem:hover a {
     color: yellow;
-} 
+}
 
 .cart {
     width: 70px;
@@ -53,14 +53,14 @@ a {
     top: 20px;
     right: 150px;
     cursor: pointer;
-  }
-  
-  .cart a {
+}
+
+.cart a {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-  } 
+}
 
 .count {
     position: absolute;
@@ -75,18 +75,18 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
 .cart img {
     width: 35px;
-  }
-  
-  .login {
+}
+
+.login {
     position: absolute;
     top: 28px;
     right: 50px;
     cursor: pointer;
-  }  
+}
 
 .user {
     position: absolute;
@@ -97,18 +97,18 @@ a {
     height: 35px;
     border-radius: 50%;
     border: 2px solid #fff;
-  }
+}
 
 .user img {
     width: 35px;
     height: 35px;
     border-radius: 50%;
     object-fit: cover;
-  }
-  
-  .menuContainer {
+}
+
+.menuContainer {
     position: relative;
-  }
+}
 
 .menu {
     display: none;
@@ -121,7 +121,7 @@ a {
     background: #000;
     border-radius: 5px;
     padding: 5px;
-  }
+}
 
 .menuItem {
     padding: 10px 10px 0px;
@@ -133,4 +133,4 @@ a {
 
 .user:hover .menuContainer .menu {
     display: block;
-} 
+}

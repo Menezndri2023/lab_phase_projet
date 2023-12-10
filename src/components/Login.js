@@ -29,7 +29,10 @@ const Login = () => {
         let uname = unameRef.current.value;
         let pword = pwordRef.current.value;
 
-        if (uname === "harry" && pword === "potter") {
+        const unamePattern = /^[a-zA-Z0-9]{4,8}$/;
+        const pwordPattern = /^[a-zA-Z0-9]{8,12}$/;
+
+        if (unamePattern.test(uname) && pwordPattern.test(pword)) {
             setIsLoggedIn(true);
             navigate("/home");
         } else {
@@ -41,11 +44,19 @@ const Login = () => {
         let isValid = false;
         let uname = unameRef.current.value;
         let pword = pwordRef.current.value;
+
+        const unamePattern = /^[a-zA-Z0-9]{4,8}$/;
+        const pwordPattern = /^[a-zA-Z0-9]{8,12}$/;
+
         if (uname.trim() === "") {
             setUnameErr("Username is required");
         } else if (pword.trim() === "") {
             setUnameErr("");
             setPwordErr("Password is required");
+        } else if (!unamePattern.test(uname)) {
+            setUnameErr("Username must be between 8 and 12 characters and only contain alphanumeric characters");
+        } else if (!pwordPattern.test(pword)) {
+            setPwordErr("Password must be between 8 and 12 characters and only contain alphanumeric characters");
         } else {
             isValid = true;
             setUnameErr("");
