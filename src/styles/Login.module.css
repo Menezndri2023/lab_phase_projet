@@ -1,6 +1,6 @@
 .loginContainer {
     width: 400px;
-    height: 480px;
+    height: 580px;
     margin: 0px auto;
     border-radius: 5px;
     border: 1px solid #d7d7d7;
@@ -63,9 +63,13 @@ input {
 }
 
 .registerLink {
-    margin-top: 20px;
+    position: absolute;
+    top: 30rem;
+    left: 10rem;
     text-align: center;
     cursor: pointer;
     color: #2a2a2a;
     text-decoration: underline;
+    height: 20rem;
+    width: 20rem;
 }

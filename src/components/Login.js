@@ -4,6 +4,7 @@ import AuthContext from "../services/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
@@ -88,7 +89,8 @@ const Login = () => {
                     <button className={loginStyles.loginBtn} type="submit">
                         Login
                     </button>
-                    <div className={loginStyles.registerLink}>Register</div>
+                        <Link className={loginStyles.registerLink} to="/register">Register</Link>
+                    
                 </form>
             </div>
         </div>

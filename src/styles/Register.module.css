@@ -1,0 +1,47 @@
+.corp {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+div .registerLink {
+    position: absolute;
+    top: 30rem;
+    left: 40rem;
+    text-align: center;
+    cursor: pointer;
+    color: #2a2a2a;
+    text-decoration: underline;
+    height: 20rem;
+    width: 20rem;
+}

@@ -24,6 +24,7 @@ const Cart = () => {
         } else {
             navigate("/Login");
         }
+        
     };
 
     useEffect(() => {
@@ -42,7 +43,6 @@ const Cart = () => {
 
     return (
         <div className={cartStyles.cartContainer}>
-            {/* <div className={cartStyles.heading}>Cart</div> */}
             <div className={cartStyles.cartWrapper}>
                 <div className={cartStyles.cartDetails}>
                     {state.cart.length > 0 ? (
@@ -56,12 +56,12 @@ const Cart = () => {
                                         <div className={cartStyles.name}>{item.name}</div>
                                         <div className={cartStyles.weight}>{item.weight}</div>
                                         <div className={cartStyles.price}>
-                                            <div className={cartStyles.current}>₹{item.price}</div>
+                                            <div className={cartStyles.current}>${item.price}</div>
                                             {item.was !== item.price ? (
                                                 <>
-                                                    <div className={cartStyles.was}>₹{item.was}</div>
+                                                    <div className={cartStyles.was}>${item.was}</div>
                                                     <div className={cartStyles.discount}>
-                                                        ₹{item.was - item.price} Off
+                                                        ${item.was - item.price} Off
                                                     </div>
                                                 </>
                                             ) : null}
@@ -72,11 +72,7 @@ const Cart = () => {
                                     </div>
                                 </div>
                             ))}
-                            <div className={cartStyles.btnContainer}>
-                                <button className={cartStyles.orderBtn} onClick={order}>
-                                    Place Order
-                                </button>
-                            </div>
+
                         </>
                     ) : (
                         <div className={cartStyles.noItem}>Your cart is empty</div>
@@ -95,21 +91,28 @@ const Cart = () => {
                                     MRP ({state.cart.length} items)
                                 </div>
                             )}
-                            <div className={cartStyles.summaryLabel}>₹{mrp}</div>
+                            <div className={cartStyles.summaryLabel}>${mrp}</div>
                         </div>
                         <div className={cartStyles.summary}>
                             <div className={cartStyles.summaryLabel}>Product Discount</div>
                             <div className={`${cartStyles.summaryLabel} ${cartStyles.disc}`}>
-                                -₹{discount}
+                                -${discount}
                             </div>
                         </div>
                         <div className={`${cartStyles.summary} ${cartStyles.total}`}>
                             <div className={cartStyles.summaryLabel}>Total Amount</div>
-                            <div className={cartStyles.summaryLabel}>₹{total}</div>
+                            <div className={cartStyles.summaryLabel}>${total}</div>
                         </div>
                     </div>
                 ) : null}
             </div>
+                
+                <button className={cartStyles.orderBtn} onClick={order}>
+                    Place Order
+                </button>
+                
+            
+        
         </div>
     );
 };
