@@ -30,7 +30,7 @@ const Register = () => {
 
     return (
         <div className={styleRegister.corp} >
-            <h1>Inscription</h1>
+           <span className={styleRegister.titre}>Register</span>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Nom d'utilisateur :</label>
                 <input type="text" id="username" name="username" value={username} onChange={(e) => setUsername(e.target.value)} required />
@@ -39,7 +39,7 @@ const Register = () => {
                 <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                 <br /><br />
                 <button type="submit">Inscription</button>
-                        <Link className={styleRegister.registerLink} to="/login">Register</Link>
+                        {/* <Link className={styleRegister.registerLink} to="/login">Register</Link> */}
                
             </form>
             {message && <p>{message}</p>}

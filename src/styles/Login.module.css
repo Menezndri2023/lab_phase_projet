@@ -65,7 +65,7 @@ input {
 .registerLink {
     position: absolute;
     top: 30rem;
-    left: 10rem;
+    
     text-align: center;
     cursor: pointer;
     color: #2a2a2a;
